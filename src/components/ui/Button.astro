@@ -1,0 +1,33 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'button'> {
+  variant?: 'filled' | 'outline';
+  size?: 'sm' | 'md' | 'lg' | 'icon';
+}
+
+const _default = {
+  class:
+    'flex cursor-pointer items-center justify-center rounded-lg hover:scale-105 transition-all duration-300 gap-2',
+  variant: 'filled',
+  size: 'md',
+};
+
+const variants: Record<string, string> = {
+  filled: 'bg-primary text-on-primary hover:bg-primary/90',
+  outline: 'border-2 border-on-primary text-on-primary hover:bg-on-primary hover:text-primary',
+};
+
+const sizes: Record<string, string> = {
+  sm: 'px-4 py-2 text-xs font-medium',
+  md: 'px-6 py-3 text-sm font-medium',
+  lg: 'px-8 py-4 text-base font-semibold',
+  icon: 'p-2',
+};
+
+const { variant, size, class: extraClasses } = { ..._default, ...Astro.props };
+---
+
+<button class:list={[variants[variant], sizes[size], _default.class, extraClasses]}>
+  <slot />
+</button>

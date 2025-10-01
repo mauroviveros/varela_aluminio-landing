@@ -1,18 +1,49 @@
+---
+import { Badge, Button } from '@components/ui';
+import hero from '@assets/hero.png?url';
+import { Icon } from 'astro-icon/components';
+---
+
 <section class="flex min-h-dvh items-center">
-  <div class="container mx-auto flex">
-    <article class="flex max-w-4xl flex-col gap-6">
-      <!-- text-5xl lg:text-7xl font-black text-balance leading-[0.9] -->
-      <h1 class="text-5xl leading-[0.75] text-balance lg:text-7xl">
-        <span>VARELA</span><br />
-        <span>ALUMINIO</span><br />
-        <!-- text-white text-3xl lg:text-4xl font-normal -->
-        <span class="text-3xl font-normal lg:text-4xl">Aberturas de alta perfomance</span>
+  <div
+    class="absolute inset-0 -z-50 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${hero});` }}
+  >
+  </div>
+
+  <div class="absolute inset-0 -z-50 bg-gradient-to-r from-black/70 to-black/40"></div>
+
+  <div class="container mx-auto flex px-4">
+    <article class="flex max-w-4xl flex-col gap-6 text-white">
+      <div class="flex items-center gap-4">
+        <Badge icon="lucide:shield">Calidad Garantizada</Badge>
+        <Badge icon="lucide:award">+20 Años</Badge>
+      </div>
+
+      <h1 class="text-5xl font-bold md:text-7xl">
+        Innovación en
+        <span class="text-primary block">Cada Abertura</span>
       </h1>
-      <p class="max-w-2xl text-xl leading-relaxed text-pretty">
-        Transformamos espacios con aberturas de aluminio y PVC de máxima calidad.
-        <b>Diseño personalizado</b>, instalación profesional y garantía extendida para tu
-        tranquilidad.
+
+      <p class="max-w-2xl text-xl leading-relaxed text-pretty text-white/90">
+        Creamos soluciones arquitectónicas únicas con la más alta tecnología en aluminio y PVC. Cada
+        proyecto es una obra de arte que combina funcionalidad, estética y durabilidad excepcional.
       </p>
+
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <Button class="group">
+          Solicitar presupuesto
+          <Icon
+            name="lucide:arrow-right"
+            size="1.25rem"
+            class="transition-transform group-hover:translate-x-1"
+          />
+        </Button>
+        <Button variant="outline">Ver catálogo</Button>
+      </div>
     </article>
   </div>
 </section>
+
+<!-- <span>VARELA</span><br />
+<span>ALUMINIO</span><br /> -->

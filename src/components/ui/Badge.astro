@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon/components';
+export interface Props {
+  icon?: string;
+}
+const { icon } = Astro.props;
+---
+
+<div class="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
+  {icon && <Icon name={icon} class="text-primary" size="1.25rem" />}
+  <span class="text-sm font-medium text-white">
+    <slot />
+  </span>
+</div>

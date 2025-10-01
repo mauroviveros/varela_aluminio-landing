@@ -8,7 +8,8 @@
       "@layout": ["./layouts/Layout.astro"],
       "@components": ["./components/index.ts"],
       "@components/*": ["./components/*"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@assets/*": ["./assets/*"]
     }
   }
 }
