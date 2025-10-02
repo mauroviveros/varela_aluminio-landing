@@ -1,0 +1,9 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+export interface Props extends HTMLAttributes<'a'> {}
+const { class: extraClasses } = Astro.props;
+---
+<a href="/" class:list={["flex flex-col font-bold text-3xl leading-6 select-none", extraClasses]}>
+  <span>VARELA</span>
+  <span class="text-primary">ALUMINIO</span>
+</a>

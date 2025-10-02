@@ -4,7 +4,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
   ...eslintPluginAstro.configs.recommended,
-  eslintPluginPrettierRecommended,
+  // eslintPluginPrettierRecommended,
   globalIgnores(['.vercel/']),
   {
     files: ['*.astro'],
@@ -16,6 +16,7 @@ export default defineConfig([
     },
     rules: {
       'prettier/prettier': 'error',
+      'sort-imports': 'warn',
     },
   },
 ]);

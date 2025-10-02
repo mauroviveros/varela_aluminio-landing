@@ -7,10 +7,18 @@
 
   --color-primary: oklch(0.55 0.2181 28.49);
   --color-on-primary: oklch(1 0 0);
+  --color-steel: oklch(0.2662 0.0134 253.05);
+  --color-on-steel: var(--color-background);
 }
 
 @layer base {
   body {
     @apply bg-background text-foreground;
   }
+
+  header[data-scrolled='true'] {
+    @apply !bg-background !text-foreground shadow-lg;
+  }
 }
+
+/* html{ overscroll-behavior: none; } */

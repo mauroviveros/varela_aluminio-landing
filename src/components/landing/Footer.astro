@@ -1,0 +1,43 @@
+---
+import { Button } from "@components/ui";
+import Brand from "@components/ui/Brand.astro";
+import { Icon } from "astro-icon/components";
+
+const SOCIALS = [
+  { name: "facebook", url: "https://facebook.com", icon: "lucide:facebook" },
+  { name: "instagram", url: "https://instagram.com", icon: "lucide:instagram" },
+  { name: "twitter", url: "https://twitter.com", icon: "lucide:twitter" },
+]
+---
+
+<footer class="bg-steel text-white/80">
+  <div class="container mx-auto px-4 py-12 grid">
+    <section class="grid gap-8 text-balance text-sm md:grid-cols-2 lg:grid-cols-4">
+      <article class="flex flex-col gap-4">
+        <Brand class="text-on-steel"/>
+
+        <p>Especialistas en aberturas de aluminio y PVC. Calidad y confianza desde 2XXX.</p>
+
+        <div class="flex gap-3">
+          {SOCIALS.map(({ name, url, icon }) => (
+            <a href={url} aria-label={name} target="_blank" rel="noopener noreferrer">
+              <Button size="icon" class="bg-white/10">
+                <Icon name={icon} size="1.25rem"/>
+              </Button>
+            </a>
+          ))}
+        </div>
+      </article>
+    </section>
+
+    <p class="mt-12 text-balance border-t text-center"><!-- pt-8 -->
+      <!-- © 2025 Varela Aluminio. Todos los derechos reservados. -->
+    </p>
+    <p class="mt-2 text-balance text-center">
+      Diseñado y construido con ❤️ por
+      <a href="https://mauroviveros.com.ar/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors hover:underline">
+        Mauro Daniel Viveros
+      </a>
+    </p>
+  </div>
+</footer>

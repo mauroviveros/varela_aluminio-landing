@@ -4,7 +4,7 @@ import hero from '@assets/hero.png?url';
 import { Icon } from 'astro-icon/components';
 ---
 
-<section class="flex min-h-dvh items-center">
+<section class="relative flex min-h-dvh items-center pt-20">
   <div
     class="absolute inset-0 -z-50 bg-cover bg-center bg-no-repeat"
     style={{ backgroundImage: `url(${hero});` }}
@@ -14,7 +14,7 @@ import { Icon } from 'astro-icon/components';
   <div class="absolute inset-0 -z-50 bg-gradient-to-r from-black/70 to-black/40"></div>
 
   <div class="container mx-auto flex px-4">
-    <article class="flex max-w-4xl flex-col gap-6 text-white">
+    <article class="flex max-w-4xl flex-col gap-6 text-background">
       <div class="flex items-center gap-4">
         <Badge icon="lucide:shield">Calidad Garantizada</Badge>
         <Badge icon="lucide:award">+20 Años</Badge>
@@ -25,7 +25,7 @@ import { Icon } from 'astro-icon/components';
         <span class="text-primary block">Cada Abertura</span>
       </h1>
 
-      <p class="max-w-2xl text-xl leading-relaxed text-pretty text-white/90">
+      <p class="max-w-2xl text-xl leading-relaxed text-pretty text-background/90">
         Creamos soluciones arquitectónicas únicas con la más alta tecnología en aluminio y PVC. Cada
         proyecto es una obra de arte que combina funcionalidad, estética y durabilidad excepcional.
       </p>

@@ -1,0 +1,13 @@
+---
+const nav = ['Inicio', 'Nosotros', 'Productos', 'Contacto'];
+---
+
+<nav class="hidden md:flex gap-8">
+  {
+    nav.map((item) => (
+      <a href="#" class="hover:text-primary font-medium">
+        {item}
+      </a>
+    ))
+  }
+</nav>
