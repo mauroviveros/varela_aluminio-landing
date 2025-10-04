@@ -1,6 +1,7 @@
 ---
 import { Footer, Header } from '@components/landing';
-import styles from '@styles/global.css?url';
+import '@styles/global.css'
+import 'animate.css';
 ---
 
 <!doctype html>
@@ -11,9 +12,6 @@ import styles from '@styles/global.css?url';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
-
-    <link rel="preload" href={styles} as="style" />
-    <link rel="stylesheet" href={styles} />
   </head>
   <body>
     <Header />
